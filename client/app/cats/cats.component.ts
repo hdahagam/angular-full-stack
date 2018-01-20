@@ -21,6 +21,11 @@ export class CatsComponent implements OnInit {
   name = new FormControl('', Validators.required);
   age = new FormControl('', Validators.required);
   weight = new FormControl('', Validators.required);
+  food = new FormControl([[], Validators.required]);
+
+  dropdownList = [];
+    selectedItems = [];
+    dropdownSettings = {};
 
   constructor(private catService: CatService,
               private formBuilder: FormBuilder,
@@ -31,8 +36,36 @@ export class CatsComponent implements OnInit {
     this.addCatForm = this.formBuilder.group({
       name: this.name,
       age: this.age,
-      weight: this.weight
+      weight: this.weight,
+      food:this.food
     });
+   this.dropdownList = [
+                              {"id":1,"itemName":"Tuna"},
+                              {"id":2,"itemName":"Chicken"},
+                              {"id":3,"itemName":"Beef"},
+                              {"id":4,"itemName":"Grapes"},
+                              {"id":5,"itemName":"Raisin"},
+                              {"id":6,"itemName":"Avacado"},
+                              {"id":7,"itemName":"Turkey"},
+                              {"id":8,"itemName":"carrots"},
+                              {"id":9,"itemName":"Zucchini"},
+                              {"id":10,"itemName":"Lettuce"}
+                            ];
+
+  this.selectedItems = [
+                        {"id":2,"itemName":"Chicken"},
+                        {"id":3,"itemName":"Beef"},
+                        {"id":4,"itemName":"Grapes"},
+                        {"id":5,"itemName":"Raisin"},
+                        {"id":6,"itemName":"Avacado"},
+                      ];
+        this.dropdownSettings = { 
+                                  text: " Select Food      ",
+                                  selectAllText: 'Select All',
+                                  unSelectAllText: 'UnSelect All'
+                                  classes:"myclass custom-class"
+                                  buttonClasses: 'btn btn-default btn-block'
+                                };   
   }
 
   getCats() {
@@ -90,5 +123,20 @@ export class CatsComponent implements OnInit {
       );
     }
   }
+
+   onItemSelect(item:any){
+        console.log(item);
+        console.log(this.selectedItems);
+    }
+    OnItemDeSelect(item:any){
+        console.log(item);
+        console.log(this.selectedItems);
+    }
+    onSelectAll(items: any){
+        console.log(items);
+    }
+    onDeSelectAll(items: any){
+        console.log(items);
+    }
 
 }
