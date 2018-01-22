@@ -51,7 +51,6 @@ export class CatsComponent implements OnInit {
                               {"id":9,"itemName":"Zucchini"},
                               {"id":10,"itemName":"Lettuce"}
                             ];
-
   this.selectedItems = [
                         {"id":2,"itemName":"Chicken"},
                         {"id":3,"itemName":"Beef"},
@@ -59,14 +58,17 @@ export class CatsComponent implements OnInit {
                         {"id":5,"itemName":"Raisin"},
                         {"id":6,"itemName":"Avacado"},
                       ];
-        this.dropdownSettings = { 
-                                  text: " Select Food      ",
-                                  selectAllText: 'Select All',
-                                  unSelectAllText: 'UnSelect All'
-                                  classes:"myclass custom-class"
-                                  buttonClasses: 'btn btn-default btn-block'
-                                };   
+                    
+  this.dropdownSettings = { 
+                            text: " Select Food      ",
+                            selectAllText: 'Select All',
+                            unSelectAllText: 'UnSelect All'
+                            classes:"myclass custom-class"
+                            buttonClasses: 'btn btn-default btn-block'
+                          };   
   }
+
+
 
   getCats() {
     this.catService.getCats().subscribe(
