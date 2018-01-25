@@ -19,6 +19,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 
+import { CatsBreedComponent } from './catsbreed/catsBreed.component';
+import { CatBreedService } from './services/catBreed.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     LogoutComponent,
     AccountComponent,
     AdminComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CatsBreedComponent
   ],
   imports: [
     RoutingModule,
@@ -42,7 +45,8 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     AuthGuardLogin,
     AuthGuardAdmin,
     CatService,
-    UserService
+    UserService,
+    CatBreedService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

@@ -62,8 +62,8 @@ export class CatsComponent implements OnInit {
   this.dropdownSettings = { 
                             text: " Select Food      ",
                             selectAllText: 'Select All',
-                            unSelectAllText: 'UnSelect All'
-                            classes:"myclass custom-class"
+                            unSelectAllText: 'UnSelect All',
+                            classes:"myclass custom-class",
                             buttonClasses: 'btn btn-default btn-block'
                           };   
   }
