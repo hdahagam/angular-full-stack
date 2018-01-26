@@ -8,3 +8,11 @@ body {
 .input-group {
   margin-bottom: 15px;
 }
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background-color: red;
+  }
+
+.my-pagination{
+	float: right;
+}  

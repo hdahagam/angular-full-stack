@@ -18,6 +18,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { CatsBreedComponent } from './catsbreed/catsBreed.component';
 import { CatBreedService } from './services/catBreed.service';
@@ -38,7 +39,8 @@ import { CatBreedService } from './services/catBreed.service';
     RoutingModule,
     SharedModule,
     AngularMultiSelectModule,
-    MultiselectDropdownModule
+    MultiselectDropdownModule,
+    NgxPaginationModule,
   ],
   providers: [
     AuthService,
