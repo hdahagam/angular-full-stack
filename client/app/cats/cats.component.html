@@ -21,7 +21,7 @@
         </tr>  
       </tbody>
       <tbody *ngIf="!isEditing">
-        <tr *ngFor="let cat of cats">
+         <tr *ngFor="let cat of cats | paginate: { id:'foo', itemsPerPage: 3, currentPage: p }" >
           <td>{{cat.name}}</td>
           <td>{{cat.age}}</td>
           <td>{{cat.weight}}</td>
@@ -56,6 +56,19 @@
         </tr>
       </tbody>
     </table>
+    <div *ngIf="!isEditing">
+       <pagination-controls  id="foo" class="my-pagination"
+                      (pageChange)="p = $event"
+                      maxSize="9"
+                      directionLinks="true"
+                      autoHide="true"
+                      previousLabel="Previous"
+                      nextLabel="Next"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+       </pagination-controls>
+     </div>  
   </div>
 </div>
 
