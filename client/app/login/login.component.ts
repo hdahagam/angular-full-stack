@@ -7,7 +7,23 @@ import { ToastComponent } from '../shared/toast/toast.component';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styles: [`
+  .loginbackground {
+      background-image: url("/assets/Images/logincar.png");
+      background-color: #cccccc;
+      background-size: cover;
+      height: 100vh;
+    }
+    .card {
+      position:absolute;
+      width: 500px;
+      margin: 0 auto;
+      top: 35%;
+      left: 15%;
+      right: 15%;
+    }
+  `]
 })
 export class LoginComponent implements OnInit {
 

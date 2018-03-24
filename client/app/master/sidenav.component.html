@@ -1,0 +1,27 @@
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li>
+                <a routerLink="cats" class="nav-item nav-link" routerLinkActive="active">
+                     Cats
+                  </a>
+            </li>
+            <li>    
+                  <a routerLink="catbreed" class="nav-item nav-link" routerLinkActive="active">
+                     Cat Breeds
+                  </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+       <router-outlet></router-outlet>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

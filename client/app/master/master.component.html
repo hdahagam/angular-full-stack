@@ -1,0 +1,35 @@
+<div class="container-fluid" style="padding: 0px;">
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="nav navbar-nav navbar-left"> 
+          <a routerLink="about" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <i class="fa fa-home"></i> Home
+          </a>
+          <a routerLink="dashboard" class="nav-item nav-link" routerLinkActive="active">
+            <i class="fa fa-list"></i> Dashboard
+          </a>
+          <!-- <a routerLink="master/cats" class="nav-item nav-link" routerLinkActive="active">
+            <i class="fa fa-list"></i> Cats
+          </a>
+          <a routerLink="master/catbreed" class="nav-item nav-link" routerLinkActive="active">
+            <i class="fa fa-list"></i> Cat Breeds
+          </a> -->
+          <a routerLink="account" class="nav-item nav-link" routerLinkActive="active" >
+            <i class="fa fa-user"></i> Account 
+          </a>
+          <a routerLink="admin" class="nav-item nav-link" routerLinkActive="active" >
+            <i class="fa fa-lock"></i> Admin
+          </a>
+         
+        </div>
+        <div class="nov navbar-nav navbar-right">
+            <a routerLink="/logout" class="nav-item nav-link" routerLinkActive="active" >
+                <i class="fa fa-sign-out"></i> Logout
+            </a>
+          <a routerLink="/register" class="nav-item nav-link" routerLinkActive="active" >
+            <i class="fa fa-user-plus"></i> Register
+          </a>
+        </div>
+      </nav>
+      <app-sidenav></app-sidenav>
+
+</div>

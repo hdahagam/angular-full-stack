@@ -26,6 +26,8 @@ export class AuthService {
   }
 
   login(emailAndPassword) {
+    console.log(emailAndPassword);
+    //commented for termporary
     return this.userService.login(emailAndPassword).map(
       res => {
         localStorage.setItem('token', res.token);

@@ -22,6 +22,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 import { CatsBreedComponent } from './catsbreed/catsBreed.component';
 import { CatBreedService } from './services/catBreed.service';
+import { SideNavComponent } from './master/sidenav.component';
+import { MasterComponent } from './master/master.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,10 @@ import { CatBreedService } from './services/catBreed.service';
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
-    CatsBreedComponent
+    CatsBreedComponent,
+    SideNavComponent,
+    MasterComponent,
+    DashboardComponent
   ],
   imports: [
     RoutingModule,
