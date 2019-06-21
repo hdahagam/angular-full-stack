@@ -23,6 +23,9 @@ import { ToastComponent } from '../shared/toast/toast.component';
       left: 15%;
       right: 15%;
     }
+    .register{
+      float: right;
+    }
   `]
 })
 export class LoginComponent implements OnInit {
