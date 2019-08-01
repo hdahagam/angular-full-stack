@@ -23,6 +23,9 @@ import { ToastComponent } from '../shared/toast/toast.component';
       left: 15%;
       right: 15%;
     }
+    .register{
+      float: right;
+    }
   `]
 })
 export class LoginComponent implements OnInit {
@@ -63,7 +66,10 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.auth.login(this.loginForm.value).subscribe(
-      res => this.router.navigate(['/']),
+      (res) => {
+        console.log("successfully logged in...");
+        this.router.navigate(['/master/dashboard']);
+      },
       error => this.toast.setMessage('invalid email or password!', 'danger')
     );
   }
